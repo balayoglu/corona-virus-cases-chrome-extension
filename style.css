@@ -1,0 +1,12 @@
+body {
+  min-width: 210px;
+}
+table {
+  border-collapse: collapse;
+}
+th, td {            
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: left;
+  background-color: white;
+}
