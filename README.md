@@ -31,3 +31,5 @@ Extension is implemented in a way that, as a default it selects a country that i
  ## Snapshots
  
  ![Add Extension Locally](https://user-images.githubusercontent.com/21006341/79047516-f335d800-7c0e-11ea-8251-add240e6631c.jpg)
+ 
+ ![Statistics](https://user-images.githubusercontent.com/21006341/79047570-68091200-7c0f-11ea-95f4-efc65860f8d1.jpg)
