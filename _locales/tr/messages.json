@@ -1,0 +1,32 @@
+{  
+  "title": {
+    "message": "Covid-19 Vakaları"
+  },
+  "danger_rank": {
+    "message": "Tehlike Sırası"
+  },
+  "total_cases": {
+    "message": "Toplam Vaka"
+  },
+  "total_recovered": {
+    "message": "Toplam İyileşen"
+  },
+  "total_deaths": {
+    "message": "Toplam Ölü"
+  },
+  "total_active": {
+    "message": "Aktif Vakalar"
+  },
+  "total_serious": {
+    "message": "Ciddi Vakalar"
+  },
+  "today_cases": {
+    "message": "Bugünkü Vakalar"
+  },
+  "today_deaths": {
+    "message": "Bugünkü Ölü"
+  },
+  "source": {
+    "message": "Kaynak"
+  }
+}

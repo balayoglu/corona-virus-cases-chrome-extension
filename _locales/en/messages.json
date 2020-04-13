@@ -1,0 +1,35 @@
+{  
+  "title": {
+    "message": "Covid-19 Cases"
+  },
+  "danger_rank": {
+    "message": "Danger Rank"
+  },
+  "total_cases": {
+    "message": "Total Cases"
+  },
+  "total_recovered": {
+    "message": "Total Recovered"
+  },
+  "total_deaths": {
+    "message": "Total Deaths"
+  },
+  "total_active": {
+    "message": "Total Active"
+  },
+  "total_serious": {
+    "message": "Total Serious"
+  },
+  "today_cases": {
+    "message": "Today Cases"
+  },
+  "today_deaths": {
+    "message": "Today Deaths"
+  },
+  "source": {
+    "message": "Source"
+  },
+  "service_error": {
+    "message": "Error fetching the data from the Virus Tracker service!"
+  }
+}
