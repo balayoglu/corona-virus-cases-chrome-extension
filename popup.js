@@ -1,30 +1,18 @@
 const worldwide = "worldwide";
+const defaultCountryCode = "gb";
+
 $(function() {
 
-  const splits = navigator.language.split("-");
-  let country = splits[0];
-  if(splits.length == 2) {
-    country = splits[1];    
-  }
-
-  if(!country) {
-    country = worldwide;
-  }
-
-  $('#country_code').val(country.toLowerCase());
+  initialize();
 
   load_stats();
 
-  $('#country_code').change(function(){
-    load_stats();
-  });
-
   function load_stats() {
-    clear_stats();
-
-    const countryCode = $('#country_code').val();
+    reset();
+    
     let imgSrc = "";
     let url = "https://api.thevirustracker.com/free-api?global=stats";
+    const countryCode = $('#country_code').val();
     const isWorldWide = countryCode === worldwide;
 
     if(!isWorldWide) {
@@ -44,16 +32,65 @@ $(function() {
         else set_country_stats(response);
       },
       error: function (xhr, ajaxOptions, thrownError) {
-        console.log(xhr);
-        console.log(thrownError);
-        alert("Error getting statistics.");
+        console.log('xhr', xhr);
+        console.log('thrownError', thrownError);
+        $('#message').css('display', 'block');
+        $('#message').text(get_i18n_message('service_error'));
       }
     }
     
     $.ajax(settings);
   }
 
-  function clear_stats() {
+  function initialize() {
+    $('#data_source').click(function() {
+      chrome.tabs.create({"url": $(this).attr("href")});
+    });
+  
+    document.querySelectorAll('[data-locale]').forEach(elem => {
+      elem.innerText = get_i18n_message(elem.dataset.locale);
+    })
+  
+    const splits = navigator.language.split("-");
+    let country = splits[0];
+    if(splits.length == 2) {
+      country = splits[1];    
+    }
+  
+    if(!country) {
+      country = worldwide;
+    }
+  
+    $('#country_code').val(country.toLowerCase());    
+    if(!$('#country_code').val()) {
+      $('#country_code').val(defaultCountryCode);
+    }
+
+    $('#country_code').change(function(){
+      load_stats();
+    });
+
+    jQuery.ajaxSetup({
+      beforeSend: function() {
+         $('#loader').show();
+      },
+      complete: function() {
+         $('#loader').hide();
+      },
+      success: function() {}
+    });
+  }
+
+  function get_i18n_message(messageId) {
+    if(chrome.i18n) {
+      return chrome.i18n.getMessage(messageId);
+    }
+    return messageId;
+  }
+
+  function reset() {
+    $('#message').css('display', 'none');
+    $('#message').html('');
     $('#danger_rank').text('');
     $('#total_cases').text('');
     $('#total_recovered').text('');
@@ -66,28 +103,30 @@ $(function() {
 
   function set_global_stats(response) {
     let data = response.results[0];
-    $('#country-tr').css('display', 'none');
+    $('#country_img').css('display', 'none');
     $('#danger-rank-tr').css('display', 'none');
-    set_stats(data);
+    $('#data_source').attr('href', data['source']['url']);
+    set_common_stats(data);
   }
 
   function set_country_stats(response) {
     let data = response['countrydata'][0];
-    $('#country-tr').css('display', '');
+    $('#country_img').css('display', 'block');
     $('#danger-rank-tr').css('display', '');
     $('#danger_rank').text(data['total_danger_rank']);
-    set_stats(data);
+    $('#data_source').attr('href', data['info']['source']);
+    set_common_stats(data);
   }
 
-  function set_stats(data) {
-    $('#total_cases').text(data['total_cases']);
-    $('#total_recovered').text(data['total_recovered']);
-    $('#total_deaths').text(data['total_deaths']);
-    $('#today_cases').text(data['total_new_cases_today']);
-    $('#today_deaths').text(data['total_new_deaths_today']);
-    $('#today_cases').text(data['total_new_cases_today']);
-    $('#today_deaths').text(data['total_new_deaths_today']);
-    $('#total_active').text(data['total_active_cases']);
-    $('#total_serious').text(data['total_serious_cases']);
+  function set_common_stats(data) {
+    $('#total_cases').text(data['total_cases'].toLocaleString());
+    $('#total_recovered').text(data['total_recovered'].toLocaleString());
+    $('#total_deaths').text(data['total_deaths'].toLocaleString());
+    $('#today_cases').text(data['total_new_cases_today'].toLocaleString());
+    $('#today_deaths').text(data['total_new_deaths_today'].toLocaleString());
+    $('#today_cases').text(data['total_new_cases_today'].toLocaleString());
+    $('#today_deaths').text(data['total_new_deaths_today'].toLocaleString());
+    $('#total_active').text(data['total_active_cases'].toLocaleString());
+    $('#total_serious').text(data['total_serious_cases'].toLocaleString());
   }
 });

@@ -1,0 +1,32 @@
+{  
+  "title": {
+    "message": "Casi di Covid-19"
+  },
+  "danger_rank": {
+    "message": "Grado di Pericolo"
+  },
+  "total_cases": {
+    "message": "Casi Totali"
+  },
+  "total_recovered": {
+    "message": "Totale Guariti"
+  },
+  "total_deaths": {
+    "message": "Totale Deceduti"
+  },
+  "total_active": {
+    "message": "Attualmente Positivi"
+  },
+  "total_serious": {
+    "message": "Terapia Intensiva"
+  },
+  "today_cases": {
+    "message": "Casi Oggi"
+  },
+  "today_deaths": {
+    "message": "Deceduti Oggi"
+  },
+  "source": {
+    "message": "Fonte"
+  }
+}

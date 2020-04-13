@@ -1,0 +1,32 @@
+{  
+  "title": {
+    "message": "Covid-19 Cлучаи"
+  },
+  "danger_rank": {
+    "message": "Уровень Oпасности"
+  },
+  "total_cases": {
+    "message": "Число Cлучаев"
+  },
+  "total_recovered": {
+    "message": "Число Выздоровление "
+  },
+  "total_deaths": {
+    "message": "Число Умерших"
+  },
+  "total_active": {
+    "message": "Число Больных"
+  },
+  "total_serious": {
+    "message": "Число Серьезных Cлучаев"
+  },
+  "today_cases": {
+    "message": "Сегодняшние Число Cлучаев"
+  },
+  "today_deaths": {
+    "message": "Сегодняшние Число Cмертей"
+  },
+  "source": {
+    "message": "Источник"
+  }
+}
