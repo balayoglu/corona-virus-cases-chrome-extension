@@ -2,9 +2,9 @@
 
 This is a repository to develop a Google Chrome extension. Via this extension you can track Corona Virus Cases choosing the country from the list.
 
-It gives information about the Death Rank of Country,  number of total Infection, Recovered, Deaths, Actives, Today's Cases, Today's Deaths and Serious cases. You can also track Worldwide stats choosing Worldwide from the list.
+It gives information about the Death Rank of Country,  number of total Infection, Recovered, Deaths, Actives, Today's Cases, Today's Deaths and Serious cases. You can also track Worldwide stats choosing Worldwide from the list. Currently it supports 4 languages (English, Italian, Turkish and Russian).
 
-You can add this extension as an Extension from Google Chrome Web Store.
+You can add this extension as an Extension from Google Chrome Web Store via this link https://chrome.google.com/webstore/detail/corona-virus-cases/hjpiinbpfiafehfffkiohaffejlhkgkh
 
 ## Tech stack used:
  - HTML
@@ -32,4 +32,10 @@ Extension is implemented in a way that, as a default it selects a country that i
  
  ![Add Extension Locally](https://user-images.githubusercontent.com/21006341/79047516-f335d800-7c0e-11ea-8251-add240e6631c.jpg)
  
- ![Statistics](https://user-images.githubusercontent.com/21006341/79047570-68091200-7c0f-11ea-95f4-efc65860f8d1.jpg)
+ ![English - Snapshots](https://user-images.githubusercontent.com/21006341/79144580-1bf8d180-7db7-11ea-8798-23da71af46fe.jpg)
+
+ ![Italian - Snapshots](https://user-images.githubusercontent.com/21006341/79144608-2b781a80-7db7-11ea-9650-5b5c853abbfc.jpg)
+
+ ![Turkish - Snapshots](https://user-images.githubusercontent.com/21006341/79144641-37fc7300-7db7-11ea-9d34-49a2a4d2f4e0.jpg)
+
+ ![Russian - Snapshots](https://user-images.githubusercontent.com/21006341/79144672-4480cb80-7db7-11ea-9204-df80967b6992.jpg)
