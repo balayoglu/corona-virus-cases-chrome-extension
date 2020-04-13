@@ -35,7 +35,3 @@ Extension is implemented in a way that, as a default it selects a country that i
  ![English - Snapshots](https://user-images.githubusercontent.com/21006341/79144580-1bf8d180-7db7-11ea-8798-23da71af46fe.jpg)
 
  ![Italian - Snapshots](https://user-images.githubusercontent.com/21006341/79144608-2b781a80-7db7-11ea-9650-5b5c853abbfc.jpg)
-
- ![Turkish - Snapshots](https://user-images.githubusercontent.com/21006341/79144641-37fc7300-7db7-11ea-9d34-49a2a4d2f4e0.jpg)
-
- ![Russian - Snapshots](https://user-images.githubusercontent.com/21006341/79144672-4480cb80-7db7-11ea-9204-df80967b6992.jpg)
