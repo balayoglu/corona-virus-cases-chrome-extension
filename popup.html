@@ -4,6 +4,8 @@
     <head>
         <title data-locale="title"></title>
         <script src="jquery-3.5.0.min.js"></script>
+        <script src="virus_tracker.js"></script>
+        <script src="novel_covid.js"></script>
         <script src="popup.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -199,7 +201,7 @@
       </div>     
 
       <img id="loader" src="Spinner-1s-32px.gif" style="display: none;padding:3px;">
-      <img id="country_img" src="" style="display: none; padding-left:3px;"/>
+      <img id="flag" src="" style="max-width: 32px; display: none; padding-left:3px; margin-top: 3px;"/>
       <p id="message" style="color:red;display: none;padding:3px;"></p>      
 
       <table>
@@ -239,6 +241,7 @@
         </tr>
       </table>
       <hr/>
-      <i><span data-locale="source"></span>: <a href="https://thevirustracker.com" id="data_source">The Virus Tracker</a></i>
+      <i><span data-locale="source"></span>: <a href="" id="data_source"></a></i> <br>
+      <i><span data-locale="alternative_source"></span>: <a href="" id="data_alternative_source"></a></i>
     </body>
 </html>

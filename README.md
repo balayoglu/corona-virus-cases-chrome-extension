@@ -15,10 +15,10 @@ You can add this extension as an Extension from Google Chrome Web Store via this
 
 ## How it works?
 
-It gets data from https://thevirustracker.com using following REST APIs:
+It gets data using the REST API of https://github.com/novelcovid/api. There is also alternative REST API of https://thevirustracker.com:
 
-- To get World Wide Covid-19 statistics https://api.thevirustracker.com/free-api?global=stats REST endpoint has been used.
-- To get Covid-19 data for a specific country, passing country code (e.g. gb for Great Britain, us for USA, etc...) as a query parameter to the REST endpoint https://api.thevirustracker.com/free-api?countryTotal={countryCode} you can get the statistics to that country only.
+- To get World Wide Covid-19 statistics we are using either https://corona.lmao.ninja/all or https://api.thevirustracker.com/free-api?global=stats REST endpoints.
+- To get Covid-19 data for a specific country, passing country code (e.g. gb for Great Britain, us for USA, etc...) as a query parameter to the REST endpoints https://corona.lmao.ninja/countries/{countryCode} or https://api.thevirustracker.com/free-api?countryTotal={countryCode} you can get the statistics to that country only.
 
 Extension is implemented in a way that, as a default it selects a country that is your Chrome Browser language set. For example, if your browser's language is gb-GB it fetches data for the country code 'gb'.
  
@@ -32,6 +32,6 @@ Extension is implemented in a way that, as a default it selects a country that i
  
  ![Add Extension Locally](https://user-images.githubusercontent.com/21006341/79047516-f335d800-7c0e-11ea-8251-add240e6631c.jpg)
  
- ![English - Snapshots](https://user-images.githubusercontent.com/21006341/79144580-1bf8d180-7db7-11ea-8798-23da71af46fe.jpg)
+ ![English - Snapshots 1280x800](https://user-images.githubusercontent.com/21006341/79264369-5da77c00-7e8c-11ea-85e7-cee730ff22f8.jpg)
 
- ![Italian - Snapshots](https://user-images.githubusercontent.com/21006341/79144608-2b781a80-7db7-11ea-9650-5b5c853abbfc.jpg)
+ ![Italian - Snapshots 1280x800](https://user-images.githubusercontent.com/21006341/79264398-6ac46b00-7e8c-11ea-9701-1ddc213ae916.jpg)
