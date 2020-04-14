@@ -32,6 +32,8 @@ Extension is implemented in a way that, as a default it selects a country that i
  
  ![Add Extension Locally](https://user-images.githubusercontent.com/21006341/79047516-f335d800-7c0e-11ea-8251-add240e6631c.jpg)
  
+ - In English
  ![English - Snapshots 1280x800](https://user-images.githubusercontent.com/21006341/79264369-5da77c00-7e8c-11ea-85e7-cee730ff22f8.jpg)
 
+- In Italian
  ![Italian - Snapshots 1280x800](https://user-images.githubusercontent.com/21006341/79264398-6ac46b00-7e8c-11ea-9701-1ddc213ae916.jpg)
