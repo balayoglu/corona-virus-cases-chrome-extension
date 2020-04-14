@@ -18,7 +18,7 @@
     "message": "Total Active"
   },
   "total_serious": {
-    "message": "Total Serious"
+    "message": "Total Critical"
   },
   "today_cases": {
     "message": "Today Cases"
@@ -29,7 +29,10 @@
   "source": {
     "message": "Source"
   },
+  "alternative_source": {
+    "message": "Alternative Source"
+  },
   "service_error": {
-    "message": "Error fetching the data from the Virus Tracker service!"
+    "message": "Error fetching the data from the service! Please, try alternative source."
   }
 }

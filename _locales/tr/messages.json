@@ -18,7 +18,7 @@
     "message": "Aktif Vakalar"
   },
   "total_serious": {
-    "message": "Ciddi Vakalar"
+    "message": "Kritik Vakalar"
   },
   "today_cases": {
     "message": "Bugünkü Vakalar"
@@ -28,5 +28,11 @@
   },
   "source": {
     "message": "Kaynak"
+  },
+  "alternative_source": {
+    "message": "Alternatif Kaynak"
+  },
+  "service_error": {
+    "message": "Vaka bilgilerini çekerken servis hata döndü! Lütfen alternatif kaynağı deneyiniz."
   }
 }

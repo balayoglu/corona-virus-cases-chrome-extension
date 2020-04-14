@@ -28,5 +28,11 @@
   },
   "source": {
     "message": "Fonte"
+  },
+  "alternative_source": {
+    "message": "Fonte Alternativa"
+  },
+  "service_error": {
+    "message": "Errore durante il recupero dei dati dal servizio! Per favore, prova una fonte alternativa."
   }
 }
