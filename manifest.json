@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Corona Virus Cases",
   "description": "A Corona Virus Cases Extension!",
-  "version": "1.4",
+  "version": "1.4.1",
   "default_locale": "en",
   "icons": {
     "128": "icon128.png",

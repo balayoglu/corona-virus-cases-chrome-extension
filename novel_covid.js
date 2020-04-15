@@ -2,13 +2,14 @@ class NovelCovid {
 
   constructor() {
     this.baseUrl = 'https://corona.lmao.ninja';
+    this.apiUrl = 'https://corona.lmao.ninja';
     this.name = "NovelCOVID";
   }
 
   getDataUrl(isWorldWide, countryCode) {
     return isWorldWide 
-      ? this.baseUrl + '/all'
-      : this.baseUrl + '/countries/' + countryCode;
+      ? this.apiUrl + '/all'
+      : this.apiUrl + '/countries/' + countryCode;
   }
 
   setFieldsDisplay(isWorldWide) {

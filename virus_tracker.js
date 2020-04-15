@@ -3,14 +3,15 @@
 class VirusTracker {
 
   constructor() {
-    this.baseUrl = 'https://api.thevirustracker.com';
+    this.baseUrl = 'https://thevirustracker.com';
+    this.apiUrl = 'https://api.thevirustracker.com';
     this.name = "The Virus Tracker";
   }
 
   getDataUrl(isWorldWide, countryCode) {
     return isWorldWide 
-      ? this.baseUrl + '/free-api?global=stats'
-      : this.baseUrl + '/free-api?countryTotal=' + countryCode;
+      ? this.apiUrl + '/free-api?global=stats'
+      : this.apiUrl + '/free-api?countryTotal=' + countryCode;
   }
 
   setFieldsDisplay(isWorldWide) {
@@ -19,7 +20,7 @@ class VirusTracker {
   }
 
   convert(response, isWorldWide, countryCode) {
-    let data = response['countrydata'][0];
+    let data = isWorldWide ? response['results'][0] : response['countrydata'][0];
     return {
       total_danger_rank: isWorldWide ? '' : data['total_danger_rank'],
       total_cases: data['total_cases'],
@@ -29,8 +30,8 @@ class VirusTracker {
       total_new_deaths_today: data['total_new_deaths_today'],
       total_active_cases: data['total_active_cases'],
       total_serious_cases: data['total_serious_cases'],
-      flag_url: isWorldWide ? data['source']['url'] : this.baseUrl + '/images/flags/' + countryCode + '.png',
-      source_url: data['info']['source'],
+      flag_url: isWorldWide ? '' : this.baseUrl + '/images/flags/' + countryCode + '.png',
+      source_url: isWorldWide ? data['source']['url'] : data['info']['source'],
       source_name: this.name
     };
   }
