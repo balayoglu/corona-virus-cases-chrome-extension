@@ -2,7 +2,7 @@ class NovelCovid {
 
   constructor() {
     this.baseUrl = 'https://corona.lmao.ninja';
-    this.apiUrl = 'https://corona.lmao.ninja';
+    this.apiUrl = 'https://corona.lmao.ninja/v2';
     this.name = "NovelCOVID";
   }
 
