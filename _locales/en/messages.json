@@ -1,4 +1,10 @@
-{  
+{
+  "extension_name": {
+    "message": "Coronavirus Cases"
+  },
+  "extension_description": {
+    "message": "Chrome Extension for Coronavirus Cases!"
+  },
   "title": {
     "message": "Covid-19 Cases"
   },

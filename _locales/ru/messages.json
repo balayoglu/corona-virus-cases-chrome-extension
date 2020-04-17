@@ -1,6 +1,12 @@
-{  
+{
+  "extension_name": {
+    "message": "Cлучаи Коронавируса"
+  },
+  "extension_description": {
+    "message": "Расширение Chrome для Случаев Коронавируса!"
+  },
   "title": {
-    "message": "Covid-19 Cлучаи"
+    "message": "Cлучаи Коронавируса"
   },
   "danger_rank": {
     "message": "Уровень Oпасности"
