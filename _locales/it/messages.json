@@ -1,6 +1,12 @@
-{  
+{
+  "extension_name": {
+    "message": "Casi di Coronavirus"
+  },
+  "extension_description": {
+    "message": "Estensione di Chrome per Casi di Coronavirus!"
+  },
   "title": {
-    "message": "Casi di Covid-19"
+    "message": "Casi di Coronavirus"
   },
   "danger_rank": {
     "message": "Grado di Pericolo"

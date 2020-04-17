@@ -1,6 +1,12 @@
-{  
+{
+  "extension_name": {
+    "message": "Koronavirüs Vakaları"
+  },
+  "extension_description": {
+    "message": "Koronavirüs Vakaları Chrome Uzantısı!"
+  },
   "title": {
-    "message": "Covid-19 Vakaları"
+    "message": "Koronavirüs Vakaları"
   },
   "danger_rank": {
     "message": "Tehlike Sırası"
