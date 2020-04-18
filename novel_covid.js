@@ -12,21 +12,36 @@ class NovelCovid {
       : this.apiUrl + '/countries/' + countryCode;
   }
 
+  getAllUrl() {
+    return this.apiUrl + '/countries?sort=deaths';
+  }
+
   setFieldsDisplay(isWorldWide) {
+    $('#all_tab').show();
     $('#flag').css('display', isWorldWide ? 'none' : 'block');
-    $('#danger-rank-tr').css('display', 'none');
+    $('#dangerRankDiv').css('display', 'none');
+  }
+
+  convertCountries(response) {
+    let converted = [];
+    for(const item of response) {
+      converted.push(this.convert(item));
+    }
+    return converted;
   }
 
   convert(data, isWorldWide) {
-    return {
+    return {      
       total_danger_rank: '',
+      country: data['country'],
+      country_code: isWorldWide ? '' : data['countryInfo']['iso2'],
       total_cases: data['cases'],
       total_recovered: data['recovered'],
       total_deaths: data['deaths'],
-      total_new_cases_today: data['todayCases'],
-      total_new_deaths_today: data['todayDeaths'],
+      total_cases_today: data['todayCases'],
+      total_deaths_today: data['todayDeaths'],
       total_active_cases: data['active'],
-      total_serious_cases: data['critical'],
+      total_critical_cases: data['critical'],
       flag_url: isWorldWide ? '' : data['countryInfo']['flag'],
       source_url: this.baseUrl,
       source_name: this.name

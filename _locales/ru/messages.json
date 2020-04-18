@@ -40,5 +40,17 @@
   },
   "service_error": {
     "message": "Ошибка при получении данных из сервиса! Пожалуйста, попробуйте альтернативный источник."
+  },
+  "country": {
+    "message": "Страна"
+  },
+  "all_countries": {
+    "message": "Все Страны"
+  },
+  "worldwide_summary": {
+    "message": "Итог Мирa"
+  },
+  "country_summary": {
+    "message": "Итог Страны"
   }
 }

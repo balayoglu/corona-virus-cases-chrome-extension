@@ -40,5 +40,17 @@
   },
   "service_error": {
     "message": "Errore durante il recupero dei dati dal servizio! Per favore, prova una fonte alternativa."
+  },
+  "country": {
+    "message": "Paese"
+  },
+  "all_countries": {
+    "message": "Tutti i Paesi"
+  },
+  "worldwide_summary": {
+    "message": "Riepilogo Mondiale"
+  },
+  "country_summary": {
+    "message": "Riepilogo Paese"
   }
 }
