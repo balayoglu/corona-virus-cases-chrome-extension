@@ -1,12 +1,95 @@
 body {
-  min-width: 220px;
+  min-width: 575px;
 }
 table {
   border-collapse: collapse;
 }
 th, td {            
   border-collapse: collapse;
-  padding: 5px;
   text-align: left;
-  background-color: white;
+}
+
+.tableFixHead          { display: block; overflow-y: auto; height: 350px; width: 100%; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+table  { border-collapse: collapse;}
+th, td { padding: 5px 0px; }
+th     { background:#eee;}
+thead th {
+  width: 0.01%;
+}
+
+.country_link {
+
+}
+
+.th-country {
+  min-width: 120px; 
+}
+
+.flag {
+  padding-right: 5px;
+  max-width: 32px;
+  vertical-align: middle;
+}
+
+.image-container {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2 !important;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 0px;
+  border-top: none;
 }

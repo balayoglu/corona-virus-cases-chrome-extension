@@ -10,11 +10,20 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+
       <h2 data-locale="title"></h2>
 
-      <div style="background-color: #eaecf0;padding:3px;">
-        <select id="country_code" style="width: 100%;">
-          <option value='worldwide' selected="selected">Worldwide</option>
+      <div class="tab">
+        <button class="tablinks active" id="all_tab" style="min-width: 190px;"><span data-locale="all_countries"></span></button>
+        <button class="tablinks" id="worldwide_tab" style="min-width: 190px;"><span data-locale="worldwide_summary"></span></button>
+        <button class="tablinks" id="country_tab" style="min-width: 193px;"><span data-locale="country_summary"></span></button>
+      </div>
+
+      <div id="all" class="tabcontent" style="display: block;padding: 0;">
+      </div>
+
+      <div id="country" class="tabcontent">
+        <select id="country_code" style="background-color: #eaecf0;padding:3px;width: 100%;">          
           <option value='af'>Afghanistan</option>
           <option value='al'>Albania</option>
           <option value='dz'>Algeria</option>
@@ -198,48 +207,54 @@
           <option value='zm'>Zambia</option>
           <option value='zw'>Zimbabwe</option>                
         </select>
-      </div>     
 
-      <img id="loader" src="Spinner-1s-32px.gif" style="display: none;padding:3px;">
-      <img id="flag" src="" style="max-width: 32px; display: none; padding-left:3px; margin-top: 3px;"/>
-      <p id="message" style="color:red;display: none;padding:3px;"></p>      
+        <img id="loader" src="Spinner-1s-32px.gif" style="display: none;padding:3px;">
+        <p id="message" style="color:red;display: none;padding:3px;"></p>      
 
-      <table>
-        <tr id="danger-rank-tr" style="display: none;">
-          <th><span data-locale="danger_rank"></span>:</th>
-          <td>
-            <span style="color:black; font-weight: bold;" id="danger_rank"></span>
-          </td>
-        </tr>
-        <tr>
-          <th><span data-locale="total_cases"></span>:</th>
-          <td><span style="color:orange; font-weight: bold;" id="total_cases"></td>
-        </tr>
-        <tr>
-          <th><span data-locale="total_recovered"></span>:</th>
-          <td><span style="color:green; font-weight: bold;" id="total_recovered"></td>
-        </tr>
-        <tr>
-          <th><span data-locale="total_deaths"></span>:</th>
-          <td><span style="color:red; font-weight: bold;" id="total_deaths"></span></td>
-        </tr>
-        <tr>
-          <th><span data-locale="total_active"></span>:</th>
-          <td><span style="color:silver; font-weight: bold;" id="total_active"></span></td>
-        </tr>
-        <tr>
-          <th><span data-locale="total_serious"></span>:</th>
-          <td><span style="color:black; font-weight: bold;" id="total_serious"></span></td>
-        </tr>
-        <tr>
-          <th><span data-locale="today_cases"></span>:</th>
-          <td><span style="color:orange; font-weight: bold;" id="today_cases"></td>
-        </tr>
-        <tr>
-          <th><span data-locale="today_deaths"></span>:</th>
-          <td><span style="color:red; font-weight: bold;" id="today_deaths"></span></td>
-        </tr>
-      </table>
+        <div id='flagDiv' class="row margin-top-5">
+          <div class="col text-center image-container">
+            <img id="flag" src="" style="max-width: 32px; display: none;"/>
+          </div>
+          <div id="dangerRankDiv" class="col text-center">
+            <h4><span data-locale="danger_rank"></span></h4>
+            <h1><span style="color:black;" id="danger_rank"></span></h4>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col text-center">
+            <h4><span data-locale="total_cases"></span></h4>
+            <h1><span style="color:orange;" id="total_cases"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4><span data-locale="total_deaths"></span></h4>
+            <h1><span style="color:red;" id="total_deaths"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4><span data-locale="total_recovered"></span></h4>
+            <h1><span style="color:green;" id="total_recovered"></span></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <h4><span data-locale="today_cases"></span></h4>
+            <h1><span style="color:orange;" id="today_cases"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4><span data-locale="today_deaths"></span></h4>
+            <h1><span style="color:red;" id="today_deaths"></span></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <h4><span data-locale="total_active"></span></h4>
+            <h1><span style="color:silver;" id="total_active"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4><span data-locale="total_serious"></span></h4>
+            <h1><span style="color:black;" id="total_serious"></span></h4>
+          </div>
+        </div>
+      </div>
       <hr/>
       <i><span data-locale="source"></span>: <a href="" id="data_source"></a></i> <br>
       <i><span data-locale="alternative_source"></span>: <a href="" id="data_alternative_source"></a></i>

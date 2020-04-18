@@ -40,5 +40,17 @@
   },
   "service_error": {
     "message": "Error fetching the data from the service! Please, try alternative source."
+  },
+  "country": {
+    "message": "Country"
+  },
+  "all_countries": {
+    "message": "All Countries"
+  },
+  "worldwide_summary": {
+    "message": "World Summary"
+  },
+  "country_summary": {
+    "message": "Country Summary"
   }
 }

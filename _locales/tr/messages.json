@@ -40,5 +40,17 @@
   },
   "service_error": {
     "message": "Vaka bilgilerini çekerken servis hata döndü! Lütfen alternatif kaynağı deneyiniz."
+  },
+  "country": {
+    "message": "Ülke"
+  },
+  "all_countries": {
+    "message": "Tüm Ülkeler"
+  },
+  "worldwide_summary": {
+    "message": "Dünya Özet"
+  },
+  "country_summary": {
+    "message": "Ülke Özet"
   }
 }
