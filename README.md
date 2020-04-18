@@ -1,10 +1,16 @@
 ## corona-virus-cases-chrome-extension
 
-This is a repository to develop a Google Chrome extension. Via this extension you can track Corona Virus Cases choosing the country from the list.
+This is a repository to develop a Google Chrome extension. 
 
-It gives information about the Death Rank of Country,  number of total Infection, Recovered, Deaths, Actives, Today's Cases, Today's Deaths and Serious cases. You can also track Worldwide stats choosing Worldwide from the list. Currently it supports 4 languages (English, Italian, Turkish and Russian).
+There are 3 tabs on the extension. On the "All Countries" main tab, you can view list of all countries in an order of deaths counts descending. Main tab only contains total number of cases, total number of deaths, cases for today and deaths for today. Clicking on Country name it will open "Country Summary" tab where you can find more details about that country like Death Rank of Country,  number of total Infection, Recovered, Deaths, Actives, Today's Cases, Today's Deaths and Critical cases. 
 
-You can add this extension as an Extension from Google Chrome Web Store via this link https://chrome.google.com/webstore/detail/corona-virus-cases/hjpiinbpfiafehfffkiohaffejlhkgkh
+You can also view Worldwide stats navigating to "Worldwide Summary" tab.
+
+If you directly navigate to "Country Summary" tab, extension opens with a country that your Chrome Browser language set as a default. Currently extensions supports 4 languages (English, Italian, Turkish and Russian), and default language is English for unsupported languages.
+
+Main source of the data is NovelCOVID(https://corona.lmao.ninja/). You can also fetch data from a secondary source of https://thevirustracker.com by switching on UI.
+
+You can add this extension as an Extension from Google Chrome Web Store via https://chrome.google.com/webstore/detail/coronavirus-cases/hjpiinbpfiafehfffkiohaffejlhkgkh
 
 ## Tech stack used:
  - HTML
@@ -33,7 +39,8 @@ Extension is implemented in a way that, as a default it selects a country that i
  ![Add Extension Locally](https://user-images.githubusercontent.com/21006341/79047516-f335d800-7c0e-11ea-8251-add240e6631c.jpg)
  
  - In English
- ![English - Snapshots 1280x800](https://user-images.githubusercontent.com/21006341/79264369-5da77c00-7e8c-11ea-85e7-cee730ff22f8.jpg)
+ ![English - All Countries - 1280x800](https://user-images.githubusercontent.com/21006341/79673900-dfbdda80-81d5-11ea-80e4-6dd3b70c59c9.jpg)
+
 
 - In Italian
- ![Italian - Snapshots 1280x800](https://user-images.githubusercontent.com/21006341/79264398-6ac46b00-7e8c-11ea-9701-1ddc213ae916.jpg)
+ ![Italian - All Countries - 1280x800](https://user-images.githubusercontent.com/21006341/79673908-f06e5080-81d5-11ea-8fcd-787bfcd7e88c.jpg)
