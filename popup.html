@@ -19,6 +19,9 @@
         <button class="tablinks" id="country_tab" style="min-width: 193px;"><span data-locale="country_summary"></span></button>
       </div>
 
+      <img id="loader" src="Spinner-1s-32px.gif" style="display: none;padding:3px;">
+      <p id="message" style="color:red;display: none;padding:3px;"></p>
+
       <div id="all" class="tabcontent" style="display: block;padding: 0;">
       </div>
 
@@ -206,10 +209,7 @@
           <option value='ye'>Yemen</option>
           <option value='zm'>Zambia</option>
           <option value='zw'>Zimbabwe</option>                
-        </select>
-
-        <img id="loader" src="Spinner-1s-32px.gif" style="display: none;padding:3px;">
-        <p id="message" style="color:red;display: none;padding:3px;"></p>      
+        </select>         
 
         <div id='flagDiv' class="row margin-top-5">
           <div class="col text-center image-container">
@@ -242,6 +242,10 @@
           <div class="col text-center">
             <h4><span data-locale="today_deaths"></span></h4>
             <h1><span style="color:red;" id="today_deaths"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4><span data-locale="total_tests"></span></h4>
+            <h1><span style="color:silver;" id="total_tests"></span></h4>
           </div>
         </div>
         <div class="row">

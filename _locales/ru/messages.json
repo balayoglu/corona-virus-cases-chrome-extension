@@ -32,6 +32,9 @@
   "today_deaths": {
     "message": "Сегодняшние Число Cмертей"
   },
+  "total_tests": {
+    "message": "Всего Тестов"
+  },
   "source": {
     "message": "Источник"
   },
