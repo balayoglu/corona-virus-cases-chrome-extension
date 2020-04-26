@@ -31,6 +31,7 @@ class VirusTracker {
       total_deaths_today: data['total_new_deaths_today'],
       total_active_cases: data['total_active_cases'],
       total_critical_cases: data['total_serious_cases'],
+      total_tests: '',
       flag_url: isWorldWide ? '' : this.baseUrl + '/images/flags/' + countryCode + '.png',
       source_url: isWorldWide ? data['source']['url'] : data['info']['source'],
       source_name: this.name

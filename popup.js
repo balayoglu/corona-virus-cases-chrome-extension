@@ -237,6 +237,7 @@ $(function() {
     $('#today_deaths').text('+' + data['total_deaths_today'].toLocaleString());    
     $('#total_active').text(data['total_active_cases'].toLocaleString());
     $('#total_serious').text(data['total_critical_cases'].toLocaleString());
+    $('#total_tests').text(data['total_tests'].toLocaleString());
     $('#data_source').attr('href', data['source_url']);
     $('#data_source').text(data['source_name']);
     $('#data_alternative_source').text(alternativeSourceApi.name);

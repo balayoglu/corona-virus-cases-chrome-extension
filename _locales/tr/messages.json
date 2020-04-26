@@ -32,6 +32,9 @@
   "today_deaths": {
     "message": "Bugünkü Ölü"
   },
+  "total_tests": {
+    "message": "Toplam Test"
+  },
   "source": {
     "message": "Kaynak"
   },

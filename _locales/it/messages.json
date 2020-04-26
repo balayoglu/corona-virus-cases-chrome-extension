@@ -32,6 +32,9 @@
   "today_deaths": {
     "message": "Deceduti Oggi"
   },
+  "total_tests": {
+    "message": "Test Totali"
+  },
   "source": {
     "message": "Fonte"
   },

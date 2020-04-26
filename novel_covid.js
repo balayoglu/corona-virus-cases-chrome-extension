@@ -42,6 +42,7 @@ class NovelCovid {
       total_deaths_today: data['todayDeaths'],
       total_active_cases: data['active'],
       total_critical_cases: data['critical'],
+      total_tests: data['tests'],
       flag_url: isWorldWide ? '' : data['countryInfo']['flag'],
       source_url: this.baseUrl,
       source_name: this.name
