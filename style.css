@@ -1,5 +1,5 @@
 body {
-  min-width: 575px;
+  min-width: 673px;
 }
 table {
   border-collapse: collapse;
@@ -19,9 +19,7 @@ thead th {
   width: 0.01%;
 }
 
-.country_link {
-
-}
+.country_link {}
 
 .th-country {
   min-width: 120px; 
