@@ -55,5 +55,8 @@
   },
   "country_summary": {
     "message": "Riepilogo Paese"
+  },
+  "top_list": {
+    "message": "Top List"
   }
 }

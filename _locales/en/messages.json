@@ -55,5 +55,8 @@
   },
   "country_summary": {
     "message": "Country Summary"
+  },
+  "top_list": {
+    "message": "Top List"
   }
 }

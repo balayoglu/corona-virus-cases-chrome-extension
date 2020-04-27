@@ -55,5 +55,8 @@
   },
   "country_summary": {
     "message": "Ülke Özet"
+  },
+  "top_list": {
+    "message": "Top Liste"
   }
 }

@@ -14,9 +14,10 @@
       <h2 data-locale="title"></h2>
 
       <div class="tab">
-        <button class="tablinks active" id="all_tab" style="min-width: 190px;"><span data-locale="all_countries"></span></button>
-        <button class="tablinks" id="worldwide_tab" style="min-width: 190px;"><span data-locale="worldwide_summary"></span></button>
-        <button class="tablinks" id="country_tab" style="min-width: 193px;"><span data-locale="country_summary"></span></button>
+        <button class="tablinks active" id="all_tab" style="min-width: 160px;"><span data-locale="all_countries"></span></button>
+        <button class="tablinks" id="worldwide_tab" style="min-width: 180px;"><span data-locale="worldwide_summary"></span></button>
+        <button class="tablinks" id="country_tab" style="min-width: 170px;"><span data-locale="country_summary"></span></button>
+        <button class="tablinks" id="top_list_tab" style="min-width: 160px;"><span data-locale="top_list"></span></button>
       </div>
 
       <img id="loader" src="Spinner-1s-32px.gif" style="display: none;padding:3px;">
@@ -259,6 +260,72 @@
           </div>
         </div>
       </div>
+
+      <div id="top_list" class="tabcontent">      
+        <div class="row">
+          <div class="col text-center">            
+            <h4>
+              <img id="total_cases_top_flag" src="" class="flag"/>
+              <span data-locale="total_cases"></span>
+            </h4>
+            <h1><span style="color:orange;" id="total_cases_top"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4>
+              <img id="total_deaths_top_flag" src="" class="flag"/>
+              <span data-locale="total_deaths"></span>
+            </h4>
+            <h1><span style="color:red;" id="total_deaths_top"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4>
+              <img id="total_recovered_top_flag" src="" class="flag"/>
+              <span data-locale="total_recovered"></span>
+            </h4>
+            <h1><span style="color:green;" id="total_recovered_top"></span></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <h4>
+              <img id="today_cases_top_flag" src="" class="flag"/>
+              <span data-locale="today_cases"></span>
+            </h4>
+            <h1><span style="color:orange;" id="today_cases_top"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4>
+              <img id="today_deaths_top_flag" src="" class="flag"/>
+              <span data-locale="today_deaths"></span>
+            </h4>
+            <h1><span style="color:red;" id="today_deaths_top"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4>
+              <img id="total_tests_top_flag" src="" class="flag"/>
+              <span data-locale="total_tests"></span>
+            </h4>
+            <h1><span style="color:silver;" id="total_tests_top"></span></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <h4>
+              <img id="total_active_top_flag" src="" class="flag"/>
+              <span data-locale="total_active"></span>
+            </h4>
+            <h1><span style="color:silver;" id="total_active_top"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4>
+              <img id="total_serious_top_flag" src="" class="flag"/>
+              <span data-locale="total_serious"></span>
+            </h4>
+            <h1><span style="color:black;" id="total_serious_top"></span></h4>
+          </div>
+        </div>
+      </div>
+
       <hr/>
       <i><span data-locale="source"></span>: <a href="" id="data_source"></a></i> <br>
       <i><span data-locale="alternative_source"></span>: <a href="" id="data_alternative_source"></a></i>

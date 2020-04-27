@@ -15,7 +15,8 @@ class VirusTracker {
   }
 
   setFieldsDisplay(isWorldWide) {
-    $('#all_tab').hide();    
+    $('#all_tab').hide();
+    $('#top_list_tab').hide();
     $('#flag').css('display', isWorldWide ? 'none' : 'block');
     $('#dangerRankDiv').css('display', isWorldWide ? 'none' : '');
   }

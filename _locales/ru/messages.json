@@ -55,5 +55,8 @@
   },
   "country_summary": {
     "message": "Итог Страны"
+  },
+  "top_list": {
+    "message": "Топ Лист"
   }
 }
