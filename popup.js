@@ -32,7 +32,6 @@ $(function() {
     }
 
     const isWorldWide = countryCode === worldwide;
-    debugger;
     if(setCountryCode && !isWorldWide) {
        $('#country_code').val(countryCode.toLowerCase());
     }
@@ -112,8 +111,6 @@ $(function() {
 
     $('#data_alternative_source').click(function() {
       let activeTab = $('.tablinks.active').attr('id');
-      console.log(activeTab);
-
       let temp = alternativeSourceApi;
       alternativeSourceApi = sourceApi;
       sourceApi = temp;
