@@ -11,6 +11,9 @@
   "danger_rank": {
     "message": "Tehlike Sırası"
   },
+  "rank": {
+    "message": "Sıra"
+  },
   "total_cases": {
     "message": "Toplam Vaka"
   },
@@ -34,6 +37,9 @@
   },
   "total_tests": {
     "message": "Toplam Test"
+  },
+  "cases_death_percentage": {
+    "message": "Toplam Ölü / Toplam Vaka"
   },
   "source": {
     "message": "Kaynak"

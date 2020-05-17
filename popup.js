@@ -6,6 +6,7 @@ const allTab = "all_tab";
 const worldwideTab = "worldwide_tab";
 const countryTab = "country_tab";
 const topListTab = "top_list_tab";
+let allCountriesData = [];
 
 $(function() {
 
@@ -19,6 +20,7 @@ $(function() {
   function load_all_stats() {
     doAjaxCall(sourceApi.getAllUrl(), function (response) {
       const data = sourceApi.convertCountries(response);
+      allCountriesData = data;
       populateCountriesTable(data);
     });
   }
@@ -69,12 +71,13 @@ $(function() {
     var table_body = '<table class="tableFixHead">';
     table_body += '<thead>';
     table_body += '<tr>';
-    table_body += '<th class="text-center">' + get_i18n_message('danger_rank') + '</th>';
-    table_body += '<th class="th-country">' + get_i18n_message('country') + '</th>';
-    table_body += '<th>' + get_i18n_message('total_cases') + '</th>';
-    table_body += '<th>' + get_i18n_message('total_deaths') + '</th>';
-    table_body += '<th>' + get_i18n_message('today_cases') + '</th>';
-    table_body += '<th>' + get_i18n_message('today_deaths') + '</th>';
+    table_body += '<th class="text-center rank-min-width">' + get_i18n_message('rank') + '</th>';
+    table_body += '<th class="country-min-width">' + get_i18n_message('country') + '</th>';
+    table_body += '<th sort-column="total_cases" class="stats-min-width sorting">' + get_i18n_message('total_cases') + '</th>';
+    table_body += '<th sort-column="total_deaths" class="stats-min-width sorting_desc">' + get_i18n_message('total_deaths') + '</th>';
+    table_body += '<th sort-column="total_cases_today" class="stats-min-width sorting">' + get_i18n_message('today_cases') + '</th>';
+    table_body += '<th sort-column="total_deaths_today" class="stats-min-width sorting">' + get_i18n_message('today_deaths') + '</th>';
+    table_body += '<th sort-column="cases_death_percentage" class="stats-min-width sorting">' + get_i18n_message('cases_death_percentage') + '</th>';
     table_body += '</tr>';
     table_body += '</thead>';
     table_body += '<tbody>';
@@ -89,6 +92,7 @@ $(function() {
       table_body += '<td>' + data[i].total_deaths.toLocaleString() + '</td>';
       table_body += '<td>+' + data[i].total_cases_today.toLocaleString() + '</td>';
       table_body += '<td>+' + data[i].total_deaths_today.toLocaleString() + '</td>';
+      table_body += '<td>' + data[i].cases_death_percentage.toLocaleString() + '%</td>';
       table_body+='</tr>';
     }
     table_body += '</tbody>';
@@ -100,6 +104,46 @@ $(function() {
       setTab(evt, "country", countryTab);
       initializeCountryTab($(this).attr("country-id"));
     });
+
+    $('.stats-min-width').click(function(event) {
+      let sortColumn = $(this).attr("sort-column");
+      let isDescending = true;
+
+      if($(this).hasClass('sorting') || $(this).hasClass('sorting_asc')) {
+        allCountriesData.sort(function(a, b) {
+          return (a[sortColumn] >= b[sortColumn]) ? -1 : 1;
+        });
+      } else {
+        allCountriesData.sort(function(a, b) {
+          return (a[sortColumn] < b[sortColumn]) ? -1 : 1;
+        });
+        isDescending = false;
+      }
+
+      populateCountriesTable(allCountriesData);
+      removeSortingOrder();
+      let sortedTh = $('th[sort-column=' + sortColumn + ']');
+      sortedTh.removeClass('sorting')
+      if(isDescending) {
+        sortedTh.addClass('sorting_desc');
+      } else {
+        sortedTh.addClass('sorting_asc');
+      }
+    });
+  }
+
+  function removeSortingOrder() {
+    let existingDesc = $('.stats-min-width.sorting_desc');
+    if(existingDesc.length > 0) {
+      existingDesc.removeClass('sorting_desc');
+      existingDesc.addClass('sorting');
+      return;
+    }
+    let existingAsc = $('.stats-min-width.sorting_asc');
+    if(existingAsc.length > 0) {
+      existingAsc.removeClass('sorting_asc');
+      existingAsc.addClass('sorting');
+    }
   }
 
   function initialize() {
@@ -221,6 +265,10 @@ $(function() {
     $('#total_tests_top_flag').attr('src', data['total_tests_flag']);
     $('#total_tests_top_flag').attr('title', data['total_tests_country']);
 
+    $('#cases_death_percentage_top').text("%" + data['cases_death_percentage'].toLocaleString());
+    $('#cases_death_percentage_top_flag').attr('src', data['cases_death_percentage_flag']);
+    $('#cases_death_percentage_top_flag').attr('title', data['cases_death_percentage_country']);
+
     $('#data_source').attr('href', data['source_url']);
     $('#data_source').text(data['source_name']);
     $('#data_alternative_source').text(alternativeSourceApi.name);
@@ -262,6 +310,8 @@ $(function() {
     $('#today_deaths').text('');
     $('#total_active').text('');
     $('#total_serious').text('');
+    $('#total_tests').text('');
+    $('#cases_death_percentage').text('');
   }
 
   function set_global_stats(data) {
@@ -282,6 +332,7 @@ $(function() {
     $('#total_active').text(data['total_active_cases'].toLocaleString());
     $('#total_serious').text(data['total_critical_cases'].toLocaleString());
     $('#total_tests').text(data['total_tests'].toLocaleString());
+    $('#cases_death_percentage').text(data['cases_death_percentage'].toLocaleString() + "%");
     $('#data_source').attr('href', data['source_url']);
     $('#data_source').text(data['source_name']);
     $('#data_alternative_source').text(alternativeSourceApi.name);
