@@ -4,9 +4,11 @@
     <head>
         <title data-locale="title"></title>
         <script src="jquery-3.5.0.min.js"></script>
+        <script src="source_base.js"></script>
         <script src="virus_tracker.js"></script>
         <script src="novel_covid.js"></script>
         <script src="popup.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/fontawesome-free-5.13.0-web/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
@@ -258,6 +260,10 @@
             <h4><span data-locale="total_serious"></span></h4>
             <h1><span style="color:black;" id="total_serious"></span></h4>
           </div>
+          <div class="col text-center">
+            <h4><span data-locale="cases_death_percentage"></span></h4>
+            <h1><span style="color:red;" id="cases_death_percentage"></span></h4>
+          </div>
         </div>
       </div>
 
@@ -322,6 +328,13 @@
               <span data-locale="total_serious"></span>
             </h4>
             <h1><span style="color:black;" id="total_serious_top"></span></h4>
+          </div>
+          <div class="col text-center">
+            <h4>
+              <img id="cases_death_percentage_top_flag" src="" class="flag"/>
+              <span data-locale="cases_death_percentage"></span>
+            </h4>
+            <h1><span style="color:black;" id="cases_death_percentage_top"></span></h4>
           </div>
         </div>
       </div>

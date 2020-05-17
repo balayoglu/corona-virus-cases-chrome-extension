@@ -11,6 +11,9 @@
   "danger_rank": {
     "message": "Grado di Pericolo"
   },
+  "rank": {
+    "message": "Rango"
+  },
   "total_cases": {
     "message": "Casi Totali"
   },
@@ -34,6 +37,9 @@
   },
   "total_tests": {
     "message": "Test Totali"
+  },
+  "cases_death_percentage": {
+    "message": "Totale Deceduti / Casi Totali"
   },
   "source": {
     "message": "Fonte"

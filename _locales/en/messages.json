@@ -10,6 +10,9 @@
   },
   "danger_rank": {
     "message": "Danger Rank"
+  },  
+  "rank": {
+    "message": "Rank"
   },
   "total_cases": {
     "message": "Total Cases"
@@ -34,6 +37,9 @@
   },
   "total_tests": {
     "message": "Total Tests"
+  },
+  "cases_death_percentage": {
+    "message": "Total Deaths / Total Cases"
   },
   "source": {
     "message": "Source"

@@ -11,6 +11,9 @@
   "danger_rank": {
     "message": "Уровень Oпасности"
   },
+  "rank": {
+    "message": "Порядок"
+  },
   "total_cases": {
     "message": "Число Cлучаев"
   },
@@ -34,6 +37,9 @@
   },
   "total_tests": {
     "message": "Всего Тестов"
+  },
+  "cases_death_percentage": {
+    "message": "Число Умерших / Число Cлучаев"
   },
   "source": {
     "message": "Источник"

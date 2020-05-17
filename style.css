@@ -1,6 +1,3 @@
-body {
-  min-width: 673px;
-}
 table {
   border-collapse: collapse;
 }
@@ -10,19 +7,77 @@ th, td {
 }
 
 .tableFixHead          { display: block; overflow-y: auto; height: 350px; width: 100%; }
-.tableFixHead thead th { position: sticky; top: 0; }
+.tableFixHead thead th { position: sticky; top: 0; padding-right: 15px;}
 
 table  { border-collapse: collapse;}
 th, td { padding: 5px 0px; }
-th     { background:#eee;}
-thead th {
-  width: 0.01%;
+th     { background:#eee; vertical-align: bottom;}
+
+thead .sorting,
+thead .sorting_asc, 
+thead .sorting_desc {
+  cursor: pointer;
+}
+
+thead .sorting_asc:before, 
+thead .sorting_desc:after {
+  opacity: 1 !important;
+}
+
+thead .sorting:before,
+thead .sorting_desc:before,
+thead .sorting_asc:before {
+  content: "\f0de";
+}
+
+thead .sorting:after,
+thead .sorting_desc:after,
+thead .sorting_asc:after {
+  content: "\f0dd";
+}
+
+thead .sorting:before, 
+thead .sorting_desc:before, 
+thead .sorting_asc:before,
+thead .sorting:after,
+thead .sorting_desc:after,
+thead .sorting_asc:after {
+  right: 5px;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  opacity: .3;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .country_link {}
 
-.th-country {
-  min-width: 120px; 
+body {
+  min-width: 673px;
+}
+
+@media only screen and (min-width: 673px) {
+  thead th {
+    width: 0.01%;
+  }
+}
+
+.country-min-width {
+  min-width: 153px; 
+}
+
+.rank-min-width {
+  min-width: 50px; 
+}
+
+.stats-min-width {
+  min-width: 100px;
 }
 
 .flag {
