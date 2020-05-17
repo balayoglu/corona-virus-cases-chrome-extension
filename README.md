@@ -39,8 +39,7 @@ Extension is implemented in a way that, as a default it selects a country that i
  ![Add Extension Locally](https://user-images.githubusercontent.com/21006341/79047516-f335d800-7c0e-11ea-8251-add240e6631c.jpg)
  
  - In English
- ![English - All Countries - 1280x800](https://user-images.githubusercontent.com/21006341/80395377-000f2880-88ab-11ea-96a3-2c4a51f0aab5.jpg)
-
+![English - 1  All Countries](https://user-images.githubusercontent.com/21006341/82157536-fb221100-9879-11ea-80f7-103a47e8d02a.jpg)
 
 - In Italian
- ![Italian - All Countries - 1280x800](https://user-images.githubusercontent.com/21006341/80395411-0e5d4480-88ab-11ea-9a38-f8dcc6a9ca7c.jpg)
+ ![Italian - 1  All Countries](https://user-images.githubusercontent.com/21006341/82157545-09702d00-987a-11ea-8252-2ac81bf87e7b.jpg)
